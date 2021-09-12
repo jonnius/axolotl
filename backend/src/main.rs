@@ -14,7 +14,7 @@ async fn main() {
     start_websocket().await;
 }
 
-async fn _test_registration() {
+async fn test_registration() {
     println!("Going to register a user");
     let phonenumber = PhoneNumber::from_str("+4917612345678").expect("Invalid phone number");
     let password = "password";

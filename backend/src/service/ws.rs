@@ -48,6 +48,8 @@ async fn handle_message(msg: Message) -> Result<Message> {
 
     println!("Received message: {:#?}", req);
 
+    crate::test_registration().await;
+
     Ok(Message::text(
         serde_json::to_string(&Response {
             id: req.id,
